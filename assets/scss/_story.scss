@@ -1,0 +1,99 @@
+.story {
+    min-height: 95vh;
+    background: #d8e4ed;
+    color: #464648;
+    @include flexbox {
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+
+    p {
+        width: 80vw;
+        line-height: 2.5rem;
+        margin: 1rem;
+        text-align: center;
+        @include for-size("tablet") {
+            width: 90vw;
+            margin: 0;
+        }
+    }
+
+    .container {
+        img {
+            height: 60vh;
+            width: 30vw;
+            object-fit: cover;
+            transition: .5s;
+            margin: 1rem;
+            @include for-size("tablet") {
+                width: 90vw;
+                margin: 0;
+                margin-bottom: 2rem;
+            }
+        }
+
+        p {
+            width: 30vw;
+            line-height: 1.7rem;
+            margin: 1rem;
+            @include for-size("tablet") {
+                width: 90vw;
+                margin: 0;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.3rem;
+            @include flexbox {
+              flex-direction: column;
+            }
+            a {
+              font-size: 1.2rem;
+              text-decoration: none;
+            }
+        }
+
+        @include flexbox {
+            flex-direction: row;
+            justify-content: space-between;
+            @include for-size("tablet") {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+// Styling for countdown
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 2.5rem; /* Font size for the countdown block */
+
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #days, #hours, #minutes, #seconds {
+      color: #ff8b61; 
+      font-size: 4rem; /* Increased font size for numbers */
+      font-weight: bold;
+    }
+
+    span {
+      font-size: 1.5rem; /* Increased font size for text (dní, hodin, minut, sekund) */
+      color: black; /* Black color for the text */
+    }
+  }
+
+  /* Make countdown items stack vertically on small screens */
+  @include for-size("tablet") {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

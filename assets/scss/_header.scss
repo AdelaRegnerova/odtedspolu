@@ -1,0 +1,128 @@
+.header {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  height: 4rem;
+  background-color: #d8e4ed;
+  color: #464648;
+  width: 100%;
+
+  @include flexbox {
+    flex-direction: column;
+  }
+
+  .nav {
+    list-style: none;
+    width: 90vw;
+    max-width: 1200px;
+    text-transform: uppercase;
+    font-size: 1rem;
+
+    @include flexbox {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    a {
+      text-decoration: none;
+      color: $grey;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+
+    li {
+      cursor: pointer;
+    }
+  }
+
+  // responsive part
+  .nav {
+    @include for-size("tablet") {
+      display: none;
+    }
+  }
+  .active + .nav {
+    display: block;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100vw;
+    margin: 0;
+    background-color: $black;
+    height: 85vh;
+    font-size: 1.5rem;
+
+    @include flexbox {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+  // Skrytí menu na mobilních zařízeních
+  .nav {
+    @include for-size("tablet") {
+      display: none;
+    }
+  }
+
+  // Menu zobrazené po aktivaci třídy .active
+  .nav.active {
+    display: block;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100vw;
+    margin: 0;
+    background-color: $black;
+    height: 85vh;
+    font-size: 1.5rem;
+
+    @include flexbox {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+
+
+// Burger menu tlačítko
+.menuButton {
+  cursor: pointer;
+  height: 1.5rem;
+  position: relative;
+  display: none;
+
+  @include for-size("tablet") {
+    display: block;
+  }
+
+  .burger {
+    position: absolute;
+    top: -0.2rem;
+    opacity: 1;
+    fill: $grey;  /* Tato barva bude pro obě ikony */
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      fill: $gold;  /* Hover efekt pro změnu barvy při najetí */
+    }
+  }
+
+  .open {
+    opacity: 0;  /* Zavírací ikona bude skrytá při zobrazení burger menu */
+    fill: $grey;  /* Tato barva bude pro křížek stejně jako pro burger */
+  }
+
+  &.active {
+    .burger {
+      opacity: 0;  /* Ikona burgeru bude skrytá, když je aktivní */
+    }
+
+    .open {
+      opacity: 1;  /* Ikona křížku se zobrazí */
+    }
+  }
+}

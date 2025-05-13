@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <title>Adélka a Tom</title>
+</head>
+
+<body>
+  <header class="header">
+    <a class="menuButton" id="button_menu">
+      <svg id="burger-open" class="close burger" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24">
+        <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+      </svg>
+      <svg id="burger-close" class="open burger" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24">
+        <path
+          d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+      </svg>
+    </a>
+    <nav class="nav" id="section_menu">
+      <a href="#story">
+        <li>Úvod</li>
+      </a>
+      <a href="#info">
+        <li>Rychlý přehled</li>
+      </a>
+      <a href="#program">
+        <li>Svatební den</li>
+      </a>    
+      <a href="#ucast">
+        <li>Potvrzení účasti</li>
+      </a>
+      <a href="#kontakt">
+        <li>Kontakty</li>
+      </a>        
+    </nav>
+  </header>
+  
+  <section class="welcome">
+    <div class="welcome-blacker"></div>
+    <div class="welcome-image"><img src="/assets\image\uvodka.png" alt="" srcset=""></div>      
+
+  </section>
+
+  <section id="story" class="story">
+    <h2 style="font-size: 3rem"> </h2> 
+    <p style="text-align: center">
+      Těšíme se na Vás 27. 9. už za
+    </p>
+  
+    <div id="countdown">
+      <div class="countdown-item">
+        <div id="days"></div>
+        <span id="days-text">dní</span>
+      </div>
+      <div class="countdown-item">
+        <div id="hours"></div>
+        <span id="hours-text">hodin</span>
+      </div>
+      <div class="countdown-item">
+        <div id="minutes"></div>
+        <span id="minutes-text">minut</span>
+      </div>
+      <div class="countdown-item">
+        <div id="seconds"></div>
+        <span id="seconds-text">sekund</span>
+      </div>
+    </div>
+  
+    <p style="text-align: center">
+      <br>Na našich životních cestách jsme se tak často potkávali, až jsme si řekli, že po nich půjdeme společně.
+    </p>
+    
+    <div class="container">
+      <div>
+        <img src="/assets/image/2010.jpg" alt="2010">
+        <ul>
+          <li>2010</li>     
+        </ul>
+      </div>
+      <div>
+        <img src="/assets/image/2016.jpg" alt="2016">
+        <ul>
+          <li>2015</li>        
+        </ul>
+      </div>
+      <div>
+        <img src="/assets/image/2024.jpeg" alt="2024">
+        <ul>
+          <li>2024</li>        
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <section id="info" class="info">
+    <div class="mess">
+      <div class="container">
+        <div class="group">
+          <div class="icon-text">
+            <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="rings">
+              <path
+                d="M371.94 163.7a222.3 222.3 0 0 1 22.43 59C435.52 244.05 464 286.55 464 336a128 128 0 0 1-256 0c0-54.66 34.52-101.17 82.85-119.44A126.49 126.49 0 0 1 304 272c0 37.37-16.38 70.73-42 94.15a80.3 80.3 0 0 0 31 37 175.71 175.71 0 0 0-46.33-292.3L288 44.66 232.53 0H119.47L64 44.66l41.29 66.23A176 176 0 0 0 176 448a164 164 0 0 0 22.86-1.82A176 176 0 1 0 371.94 163.7zM128 55.34l8.53-7.34h78.94l8.53 7.34-25.47 42.26a160 160 0 0 0-45.06 0zM48 272a128.14 128.14 0 0 1 128-128c33 0 62.87 12.91 85.6 33.51-59.88 28-101.6 88-101.6 158.49a175.18 175.18 0 0 0 12 63.6C103.33 397.45 48 341.22 48 272z">
+              </path>
+            </svg>
+            <h2>Obřad</h2>
+          </div>
+          <p>
+            <span><strong>Kde:</strong> kostel sv. Jakuba Většího <a href="https://mapy.cz/s/magajaluba" target="_blank" rel="noopener">(zde)</a></span><br>
+            <span><strong>Kdy:</strong> 11 hodin</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="jidlo">
+      <div class="container">
+        <div class="group">
+          <div class="icon-text">
+            <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="cheers">
+              <path
+                d="M587.6 414.1l-29.8 11.7-40.5-103c50.9-33.5 70.1-100.2 40.2-154.3l-84.1-152C467.6 6.1 456.8 0 445.4 0c-3.9 0-7.9.7-11.7 2.2L320 46.9 206.3 2.2C202.5.7 198.5 0 194.6 0c-11.3 0-22.2 6.1-28 16.5l-84.1 152c-29.9 54.1-10.7 120.8 40.2 154.3l-40.5 103-29.8-11.7c-20.6-8.1-43.8 2-51.9 22.6-1.6 4.1.4 8.8 4.5 10.4l163.8 64.4c4.1 1.6 8.8-.4 10.4-4.5 8.1-20.6-2-43.8-22.6-51.9l-29.8-11.7L167.1 341c8 1.6 16 2.5 23.8 2.5 52.6 0 100.9-34.2 114.2-87.4l14.8-59.6 14.8 59.6c13.2 53.2 61.5 87.4 114.2 87.4 7.9 0 15.9-.9 23.8-2.5l40.2 102.3-29.8 11.7c-20.6 8.1-30.7 31.3-22.6 51.9 1.6 4.1 6.3 6.1 10.4 4.5l164-64.4c4.1-1.6 6.1-6.3 4.5-10.4-8-20.5-31.3-30.6-51.8-22.5zm-329-169.6c-7.5 30-35.3 51-67.6 51-9.4 0-18.7-1.8-27.8-5.3-20.1-7.9-35.7-23.8-42.8-43.5-6.7-18.5-5.2-38 4.1-54.8l25.1-45.3 121.5 47.8-12.5 50.1zm24.2-97.2L173 104.1 201.8 52l95.4 37.5-14.4 57.8zm74.4 0l-14.4-57.7L438.2 52l28.8 52.1-109.8 43.2zm119.6 142.8c-9 3.5-18.3 5.3-27.8 5.3-32.3 0-60.1-21-67.6-51l-12.5-50.3 121.5-47.8 25.1 45.3c9.3 16.8 10.8 36.3 4.1 54.8-7.1 19.9-22.7 35.8-42.8 43.7z">
+              </path>
+            </svg>
+            <h2>Hostina</h2>
+          </div>
+          <p>
+            <span><strong>Kde:</strong> sokolovna v Červeném Kostelci <a href="https://mapy.cz/s/fazekemuza" target="_blank" rel="noopener">(zde)</a></span><br>
+            <span><strong>Kdy:</strong> po obřadu</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+  <section id="program" class="program">
+
+    <h2>HARMONOGRAM</h2>
+    <div class="timeline-container">
+      <div class="timeline-container">
+        <ul id="reverted">
+          <li class="done">
+            <div class="date">
+              <span class="time">8:30</span>
+              <h3>Snídaně</h3>
+              <span class="metadata"><a href="https://mapy.cz/s/lafatusele" target="_blank" rel="noopener">U Regnerů na zahradě</a></span>
+            </div>
+          </li>
+          <li class="done">
+            <div class="date">
+              <span class="time">10:30</span>
+              <h3>Společný odjezd na obřad</h3>
+            </div>
+          </li>
+          <li class="done">
+            <div class="date">
+              <span class="time">11:00</span>
+              <h3>Svatební obřad</h3>
+            </div>
+          </li>      
+          <li class="done">
+            <div class="date">
+              <span class="time">13:30</span>
+              <h3>Svatební hostina</h3>
+            </div>
+          </li>   
+          <li class="done">
+            <div class="date">
+              <span class="time">16:30</span>
+              <h3>Večerní párty</h3>
+            </div>
+          </li>                                  
+        </ul>
+      </div>
+    </div>
+
+    <h2><br>DRESS CODE</h2>
+    <p>
+      &nbsp; &nbsp; &nbsp;Co na sebe? Budeme rádi, když se oblečete slavnostně, a pokud budete chtít, můžete se sladit i do našich barev.
+    </p>
+    <div class="dresscode-images">
+      <div class="color">
+        <img src="/assets/image/dc1.png" alt="Světle modrá">
+      </div>
+      <div class="color">
+        <img src="/assets/image/dc2.png" alt="Světle zelená">
+      </div>
+      <div class="color">
+        <img src="/assets/image/dc3.png" alt="Pastelově růžová">
+      </div>
+      <div class="color">
+        <img src="/assets/image/dc4.png" alt="Pastelově meruňková">
+      </div>
+    </div>
+      
+
+
+
+
+    <h2><br>DARY</h2> 
+    <p>
+      &nbsp; &nbsp; &nbsp;Pokud byste nás chtěli něčím obdarovat, budeme vděční za finanční příspěvek do začátku našeho společného života.   
+    </p>
+
+    <h2><br>DOPRAVA A UBYTOVÁNÍ</h2> 
+    <p>
+      &nbsp; &nbsp; &nbsp; Po obědě bude možnost odvézt si auto domů a během celého odpoledne budou k dispozici naši řidiči. 
+      Ubytování zvolte podle svého gusta. Je možno přespat ve skautské klubovně, před klubovnou ve vlastním stanu nebo si ubytování zajistit jinak.
+      <br>&nbsp; 
+    </p>
+    
+  </section>
+
+  <section id="ucast" class="ucast">
+    <h2>POTVRZENÍ ÚČASTI</h2>
+    <p>Prosíme, dejte nám do konce července vědět, zda dorazíte!</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJ5rbR6iySEGBdfDg0oxTm5kQXIDUTd8asaJchBVuA8RhXGw/viewform?usp=header" target="_blank" rel="noopener"><button>potvrdit účast</button></a>
+  </section>   
+
+  <section id="kontakt" class="kontakty">
+    <h2>KONTAKTY</h2>
+    <p style="text-align: center;">&nbsp; &nbsp; &nbsp; Pokud budete mít dotazy nebo se budete chtít jakkoliv zapojit, obraťte se prosím na naše svědky.</p>
+    <div class="container">
+      <div class="contact">
+        <img src="/assets/image/lukin.JPG" alt="Lukáš Semerák">
+        <ul>
+          <li>Lukin</li> 
+          <li>svědek ženicha</li>
+          <li><a href="tel:+420605993468">605 993 468</a></li>          
+        </ul>
+      </div>
+      <div class="contact">
+        <img src="/assets/image/beta.JPG" alt="Alžběta Regnerová">
+        <ul>
+          <li>Bětuška</li> 
+          <li>svědkyně nevěsty</li>
+          <li><a href="tel:+420737656782">737 656 782</a></li>          
+        </ul>
+      </div>
+    </div>
+
+  </section>    
+
+<!--pravděpodobně odstranění kontaktu na konci
+  </section>
+  <footer>
+    <p>kontaktní mail: <a href="mailto:budemeklingerovi@gmail.com">budemeklingerovi@gmail.com</a></p>
+  </footer>
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+-->
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Sep 27, 2025 10:00:00").getTime();
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+  // Get today's date and time
+  var now = new Date().getTime();
+  
+  if (countDownDate > now) {
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Display the result in the elements with the respective IDs
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("days-text").innerHTML = "<br>dní";
+    
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("hours-text").innerHTML = "<br>hodin";
+    
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("minutes-text").innerHTML = "<br>minut";
+    
+    document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("seconds-text").innerHTML = "<br>sekund";
+  
+  } else {
+    // Find the distance between now and the count down date
+    var distance = now - countDownDate;
+    
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Display the result in the elements with the respective IDs
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("days-text").innerHTML = "<br>dní";
+    
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("hours-text").innerHTML = "<br>hodin";
+    
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("minutes-text").innerHTML = "<br>minut";
+    
+    document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("seconds-text").innerHTML = "<br>sekund"; 
+  }
+}, 1000);
+  
+//listener pro klik
+document.getElementById("button_menu").addEventListener("click", function() {
+  // Získáme menu a tlačítko burger
+  const menu = document.getElementById("section_menu");
+  const menuButton = document.getElementById("button_menu");
+
+  // Přepneme třídy .active na menu a tlačítku burger
+  menu.classList.toggle("active");
+  menuButton.classList.toggle("active");
+});
+</script>
+
+</body>
+
+
+
+</html>

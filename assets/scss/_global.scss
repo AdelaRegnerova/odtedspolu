@@ -1,0 +1,48 @@
+// Import fontů přímo v SCSS souboru
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+// Definice základního fontu pro celé tělo
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #d8e4ed;
+  color: $black;
+  font-family: "Montserrat", sans-serif; /* Nastavení fontu Montserrat pro normální text */
+  font-size: 1.1rem;
+
+  @include flexbox {
+    flex-direction: column;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif; /* Montserrat pro nadpisy */
+  font-weight: 300; /* Light pro nadpisy */
+}
+
+a {
+  transition: 0.3s;
+  color: $grey;
+  &:hover {
+    color: $gold;
+  }
+}
+
+p {
+  font-size: 1.9rem;
+}
+
+.and {
+  font-family: "Ms Madi", bolt;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif; /* Montserrat pro h2 */
+  font-weight: 300; /* Light pro h2 nadpisy */
+}

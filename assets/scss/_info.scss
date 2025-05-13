@@ -1,0 +1,81 @@
+.info {
+  width: 100%;
+  min-height: 50vh;
+  background: #497799;
+  color: $white;
+  display: flex; /* Flexbox pro celé sekce */
+  justify-content: center; /* Horizontální centrování */
+  align-items: center; /* Vertikální centrování */
+  @include for-size("tablet") {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  /* Flexbox pro řádek */
+  @include flexbox {
+    flex-direction: row;
+    @include for-size("tablet") {
+      flex-direction: column;
+    }
+  }
+
+  .mess,
+  .jidlo {
+    width: 45vw; /* Rozšíření šířky pro větší prostor */
+    font-size: 1.2rem;
+    display: flex; /* Flexbox pro obsah v rámci skupiny */
+    flex-direction: column; /* Vertikální uspořádání textu */
+    justify-content: center; /* Vertikální centrování textu */
+    align-items: center; /* Horizontální centrování textu */
+    text-align: center; /* Zarovnání textu na střed */
+    @include for-size("tablet") {
+      width: 100%; /* Na tabletech zabere celou šířku */
+    }
+  }
+
+  .icon-text {
+    display: flex;
+    flex-direction: row; /* Horizontální uspořádání ikony a nadpisu */
+    align-items: center; /* Zarovnání ikony a nadpisu na střed */
+    justify-content: center; /* Zarovnání ikony a nadpisu na střed */
+    margin-bottom: 0.5rem;
+  }
+
+  svg {
+    height: 5rem;
+    fill: $white;
+    margin-right: 10px;
+    @include for-size("tablet") {
+      height: 4rem;
+    }
+  }
+
+  .container {
+    width: 100%; /* Zajištění plné šířky pro text */
+    @include for-size("tablet") {
+      text-align: center;
+    }
+    @include flexbox {
+      flex-direction: column;
+      justify-content: center;
+      justify-items: center;
+      align-items: center; /* Centrování textu a ikon v rámci containeru */
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 0;
+      transition: 0.5s;
+      @include for-size("tablet") {
+        margin-top: 0;
+      }
+    }
+  }
+
+  a {
+    color: $white;
+    &:hover {
+      color: $gold;
+    }
+  }
+}

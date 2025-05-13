@@ -1,0 +1,250 @@
+.program {
+  min-height: 95vh;
+  padding-top: 3rem;
+  width: 100%;
+  background-color: white;
+  background-image: url(/assets/image/webp/rychlebky.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom left;
+  @include flexbox {
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  .time {
+    font-size: 1.5rem;
+    padding-top: 0;
+  }
+
+  .metadata {
+    color: $grey;
+    font-size: 1.2rem;
+    a {
+      color: $grey;
+    }
+  }
+
+  p {
+    width: 80vw;
+    line-height: 2.5rem;
+    margin: 1rem;
+    text-align: center;
+    @include for-size("tablet") {
+      width: 90vw;
+      margin: 0;
+    }
+  }
+}
+
+// the start of style for dress code images
+.dresscode-images {
+  display: flex;             // Flexbox pro zobrazení obrázků vedle sebe
+  justify-content: center;    // Obrázky budou zarovnány na střed
+  gap: 6rem;               // Větší mezera mezi obrázky
+  padding: 2rem 0;           // Okraje kolem obrázků
+  flex-wrap: wrap;           // Obrázky se zarovnají pod sebe při menší obrazovce
+}
+
+.dresscode-images .color {
+  display: flex;             // Flexbox pro každé barevné kolečko
+  justify-content: center;   // Zarovnání obrázků na střed uvnitř
+  align-items: center;       // Vertikální zarovnání
+}
+
+.dresscode-images img {
+  border-radius: 50%;        // Kulatý rámeček
+  width: 200px;              // Větší šířka obrázku
+  height: 200px;             // Větší výška obrázku
+  object-fit: cover;         // Udržení proporcí obrázku v rámečku
+  transition: transform 0.3s ease; // Efekt zvětšení při najetí
+}
+
+.dresscode-images img:hover {
+  transform: scale(1.1);     // Zvětšení obrázku při najetí
+}
+
+// the start of style timeline
+.timeline-container {
+  margin: auto;
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  @include for-size('tablet'){
+    padding: 0;
+  }
+  & li {
+    list-style: none;
+  }
+}
+
+.timeline-container ul {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.timeline-container ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -4px;
+  display: block;
+  width: 4px;
+  height: 0;
+  background: #2e2e2e;
+  animation: bar 0.1s ease-in forwards;
+  animation-delay: 0.3s;
+  z-index: 5;
+}
+
+.timeline-container ul li {
+  animation: text 0.2s ease-out forwards;
+  opacity: 0;
+  position: relative;
+  z-index: 6;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.timeline-container ul li:nth-child(n + 0) {
+  animation-delay: 0.8s;
+}
+
+.timeline-container ul li:nth-child(n + 1) {
+  animation-delay: 0.9s;
+}
+
+.timeline-container ul li:nth-child(n + 2) {
+  animation-delay: 1s;
+}
+
+.timeline-container ul li:nth-child(n + 3) {
+  animation-delay: 1.1s;
+}
+
+.timeline-container ul li:nth-child(n + 4) {
+  animation-delay: 1.2000000000000002s;
+}
+
+.timeline-container ul li:nth-child(n + 5) {
+  animation-delay: 1.3000000000000003s;
+}
+
+.timeline-container ul li:nth-child(n + 6) {
+  animation-delay: 1.4000000000000004s;
+}
+
+.timeline-container ul li:nth-child(n + 7) {
+  animation-delay: 1.5000000000000004s;
+}
+
+.timeline-container ul li:nth-child(n + 8) {
+  animation-delay: 1.6000000000000005s;
+}
+
+.timeline-container ul li:nth-child(n + 9) {
+  animation-delay: 1.7000000000000006s;
+}
+
+.timeline-container ul li:nth-child(n + 10) {
+  animation-delay: 1.8000000000000007s;
+}
+
+.timeline-container ul li div {
+  display: block;
+  clear: both;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  padding: 40px;
+}
+
+.timeline-container ul li .date {
+  font-weight: 700;
+  font-size: 110%;
+  position: relative;
+  z-index: 6;
+  padding-left: 30px;   // Přidání prostoru na levé straně pro čas
+}
+
+.timeline-container ul li .date::after {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  border: 6px solid $black;
+  top: 50%;
+  margin-top: -10px;
+  z-index: 10;
+  left: -13px;
+}
+
+.timeline-container ul li.done .date {
+  color: $black;
+}
+
+.timeline-container ul li.done .date::after {
+  background: #fff;  // Změna výplně teček na bílou
+}
+
+/* Nastavení časového údaje (time) vlevo */
+.timeline-container ul li .date .time {
+  position: absolute;
+  left: -100px;          // Posun časového údaje vlevo od bodu
+  top: 50%;
+  transform: translateY(-50%);  // Vertikální zarovnání
+  font-size: 2rem;    // Velikost textu pro čas
+  font-weight: 700;      // Tlustý font pro čas
+}
+
+/* Upravit vzhled pro ostatní text v harmonogramu */
+.timeline-container ul li .date h3 {
+  margin-left: 20px;    // Přidání mezery mezi časem a názvem akce
+}
+
+.text_stred {
+  margin-top: 0;
+  margin-bottom: 10;  
+  width: 80vw;
+  line-height: 1rem;
+  margin: 1rem;
+  @include for-size("tablet") {
+    width: 90vw;
+    margin: 0;
+  }
+}
+
+@keyframes bar {
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes text {
+  to {
+    opacity: 1;
+  }
+}
+
+div > a {
+  text-decoration: none;
+  color: $black;
+}
+
+li.done::marker {
+  display: none !important;
+}
